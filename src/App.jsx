@@ -2,6 +2,7 @@ import { useState } from "react";
 import Sidebar from "./Components/Sidebar";
 import Docs from "./Components/Docs";
 import Guide from "./Components/Guide";
+import Feedback from "./Components/Feedback";
 
 function App() {
   const [read, setRead] = useState(0);
@@ -33,7 +34,9 @@ function App() {
         />
 
       <Guide />
-      
+
+      <Feedback />
+
     </div>
   );
 }
