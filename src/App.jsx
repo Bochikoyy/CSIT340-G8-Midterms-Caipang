@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Sidebar from "./Component/Sidebar";
-import Docs from "./Component/Docs";
+import Sidebar from "./Components/Sidebar";
+import Docs from "./Components/Docs";
 
 function App() {
   const [read, setRead] = useState(0);

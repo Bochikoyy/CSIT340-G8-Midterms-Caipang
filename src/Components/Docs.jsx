@@ -1,9 +1,11 @@
 import Header from "./Header";
+import StatCard from "./StatCard";
 function Docs({ read, bookmarks, handleRead, handleBookmark, handleReset }) {
     return (
         <div className="flex items-end justify-between px-20 pt-10">
+
         <div>
-          <Header / >
+          <Header />
           <div className="mt-6 flex gap-4">
             <button
               className="cursor-pointer rounded-lg bg-[#5C766D] px-8 py-3 text-xl font-bold text-[#EDE9E6]"
@@ -25,16 +27,12 @@ function Docs({ read, bookmarks, handleRead, handleBookmark, handleReset }) {
             </button>
           </div>
         </div>
+
         <div className="flex gap-6">
-          <div className="w-48 rounded-xl border-2 border-[#5C4F4A] py-4 text-center">
-            <p className="text-4xl font-bold text-[#5C766D]">{read}</p>
-            <p className="mt-1 text-lg">Marked as read</p>
-          </div>
-          <div className="w-48 rounded-xl border-2 border-[#5C4F4A] py-4 text-center">
-            <p className="text-4xl font-bold text-[#5C766D]">{bookmarks}</p>
-            <p className="mt-1 text-lg">Bookmarks</p>
-          </div>
+          <StatCard value={read} label="Marked as read" />
+          <StatCard value={bookmarks} label="Bookmarks" />
         </div>
+        
       </div>
     );
 }
